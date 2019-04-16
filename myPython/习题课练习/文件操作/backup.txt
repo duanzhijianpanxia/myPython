@@ -1,0 +1,7 @@
+C:\Users\lenovo\Desktop\1-python基础\duanzhijianpanxia\myPython\习题课练习\文件操作\.ipynb_checkpoints
+C:\Users\lenovo\Desktop\1-python基础\duanzhijianpanxia\myPython\习题课练习\文件操作\.ipynb_checkpoints\文件操作-checkpoint.ipynb
+C:\Users\lenovo\Desktop\1-python基础\duanzhijianpanxia\myPython\习题课练习\文件操作\.ipynb_checkpoints\文件操作1-checkpoint.ipynb
+C:\Users\lenovo\Desktop\1-python基础\duanzhijianpanxia\myPython\习题课练习\文件操作\backup.txt
+C:\Users\lenovo\Desktop\1-python基础\duanzhijianpanxia\myPython\习题课练习\文件操作\test1.txt
+C:\Users\lenovo\Desktop\1-python基础\duanzhijianpanxia\myPython\习题课练习\文件操作\test2.txt
+C:\Users\lenovo\Desktop\1-python基础\duanzhijianpanxia\myPython\习题课练习\文件操作\test3.txt
