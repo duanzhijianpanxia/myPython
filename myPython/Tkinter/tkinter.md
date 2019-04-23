@@ -141,3 +141,40 @@
     - underline： 制定是否菜单信息下有横线
     - menu：属性制定使用哪一个作为顶级菜单
     
+    
+    
+### 级联菜单
+- add_cascade:级联菜单，作用是引出后面的菜单
+- add_cascade的menu属性：指明把菜单级联到哪个菜单上
+- label： 名称
+- 过程：
+    1. 建立menu实例
+    2. add_command
+    3. add_cascade
+    
+### 弹出式菜单
+- 弹出菜单也叫上下文菜单
+- 实现的大致思路
+    1. 简理财单并向菜单添加各种功能
+    2. 监听鼠标右键
+    3. 如果右键点击，则根据位置判断弹出
+    4. 调用Menu的pop方法
+- add_separator: 添加分隔符
+
+
+### canvas 画布
+- 画布： 可以自由的在上面绘制图形的一个小舞台
+- 在画布上绘制对象， 通常用create_xxxx，xxxx=对象类型， 例如line，rectangle
+- 画布的作用是把一定组件画到画布上显示出来
+- 画布所支持的组件：
+    - arc-->>,弧，圆弧
+    - bitmap-->>位图
+    - image(BitmapImage, PhotoImage)-->>图片
+    - line-->>直线
+    - oval-->>椭圆
+    - polygon-->>多边形
+    - rectangle-->>矩形
+    - text-->>文本
+    - winodw（组件）
+- 每次调用create_xxx都会返回一个创建的组件的ID，同时也可以用tag属性指定其标签
+- 通过调用canvas.move实现一个一次性动作
