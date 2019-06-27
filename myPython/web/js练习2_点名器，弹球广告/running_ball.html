@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹球广告</title>
+    <script src="../jQuery/jquery-1.8.3.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #ball{
+            width: 200px;
+            height: 200px;
+            background-color: springgreen;
+            border-radius: 50%;
+            position: absolute;
+            padding: 30px;
+        }
+        #b{
+            width: 30px;
+            height: 30px;
+            border: 2px solid lightgray;
+        }
+        #x{
+            color: red;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            line-height: ;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="ball">
+        <div id="b">
+            <span id="x">X</span>
+        </div>
+    </div>
+
+    <script>
+        // var ball = document.getElementById('ball');
+        $('#ball'); // 两种获取元素方法和对元素进行操作jQuery更方便更简洁
+
+        var stepl = 5;
+        var stept = 5;
+
+        var into;
+
+        function info(){
+            into = setInterval(function () {
+                // 获取左边和顶部偏移量
+                var l = ball.offsetLeft;
+                var t = ball.offsetTop;
+                // 设置新的偏移量
+                var newl = l+stepl;
+                var newt = t+stept;
+                // 获取浏览器可视区域宽高
+                var w = document.documentElement.clientWidth;
+                var h = document.documentElement.clientHeight;
+                // 获取元素自身宽高
+                var selfw = ball.offsetWidth;
+                var selfh = ball.offsetHeight;
+                // 获取最大移动范围
+                var maxw = w - selfw;
+                var maxh = h - selfh;
+                // 判断元素左右移动范围，超边界取反移动
+                if (newl >= maxw || newl <= 0){
+                    stepl *= -1;
+                }
+                // 同理判断上下边界
+                if (newt >= maxh || newt <= 0){
+                    stept *= -1;
+                }
+                // 写入层叠样式
+                ball.style.left = newl + 'px';
+                ball.style.top = newt + 'px';
+            },30)
+        }
+        info();
+        // 鼠标移入停止
+        $('#ball').mouseover(function (){
+            over()
+        });
+        // 鼠标移出继续
+        ball.onmouseout = (function () {
+            info();
+            $('#ball').css('background','springgreen');
+        });
+        // 鼠标绑定事件的两种方式 ，个人感觉jQuery想到好用 还有就是好好好体会外部封装函数的用法
+        // 该函数封装的是鼠标移入事件产生的效果over(),在上面的鼠标移入事件中有调用
+        function over() {
+            clearInterval(into);
+            $('#ball').css('background','yellow');
+        }
+        // 鼠标点击X 关闭或者终止计时器（运动状态） 这几行代码基于jQuery实现，等同下面注释掉的代码
+        $('#x').click(function () {
+            clearInterval(into);
+            $('#ball').css('display','none');
+        });
+        // 关闭按钮
+        // var x = document.getElementById('x');
+        // x.onmousedown = function () {
+        //     clearInterval(into);
+        //     ball.style.display = "none";
+        // }
+
+    </script>
+</body>
+</html>

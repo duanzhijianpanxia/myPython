@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用的有有语义行级标签</title>
+</head>
+<body>
+<!--链接标签
+    a标签  href属性，跟的是要跳转的网址
+    target：_blank  在新窗口打开 跳转的页面
+-->
+<a href="http://www.baidu.com">百度</a><br>
+<a href="https://user.qzone.qq.com" target="_blank">QQ空间</a><br>
+<a href="../day1/HTML文档.md" target="_blank">跳转至本地文件（HTML文档.md）</a><br>
+
+<!--<a href="E:/Git/myPython/web/day2/2.html" target="_blank">跳转至本地文件（01html）</a><br>-->
+<!--绝对路径为啥不好使呢-->
+
+<!--
+    路径问题   在实际开发中建议使用相对路径 ./当前路径   ../上层目录
+    层级和前面的点点数目有关系,
+    绝对路径 在Windows系统当中，绝对路径的跟是我们文件所在的盘符
+    E:\Git\myPython\web\day2\2.html
+-->
+
+<!-- img标签
+    图像标签(是单标签，不需要闭合)，具有以下属性：
+    src:图片的地址（网路资源或者本地资源）
+    alt:用于图片加载失败的代替文字（必须存在）
+    title：鼠标悬停在图片上的提示信息（可写可不写）
+    width：设置图片的宽度
+    height：设置图片的高度
+    注意：一般我们只设置图片长度或者宽度的其中一个，
+    另一个会等比例自动补全，防止图片是发生畸变
+-->
+<img src=".\images\20190419225942.jpg" alt="美女大图" width="1920px"><br>
+<!--<img src="./images/20190419230059.jpg" alt="美女2" title="美女图片">-->
+<img src="http://img2.imgtn.bdimg.com/it/u=4129759103,411817183&fm=11&gp=0.jpg" alt="网络美女大图" title="图片" width="1920px"><br>
+
+<!--文本标签-->
+    <!--加粗b,倾斜i, 另外的具有强调意义的：strong加粗，em倾斜-->
+    <b>src</b>图片地址（网络资源或者本地资源）<br>
+    <i>alt:</i>>用于图片加载失败的代替文字（必须存在）<br>
+    <strong>title：</strong>鼠标悬停在图片上的提示信息<em>（可写可不写）</em><br>
+
+<!--span 无语义的行级元素 一般span标签也是配合CSS使用，来设置文本当中一部分内容-->
+    title：鼠标悬停在图片上的提示信息（可写可不写）<br>
+    <span style="color:red">title：</span>鼠标悬停在图片上的提示信息（可写可不写）<br>
+
+<!--html当中的实体字符 &gt;  大于号，&lt; 小于号，&copy;, &nbsp;空格-->
+
+</body>
+</html>
