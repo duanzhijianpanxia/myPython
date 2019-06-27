@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css介绍</title>
+    <style>
+        a{
+        /*    text-decoration: none;   去掉下划线*/
+        /*    text-decoration：underline;    单下划线，默认添加*/
+        /*    text-decoration: overline;    上划线，默认添加*/
+        /*    管穿线*/
+            text-decoration: line-through;
+        }
+    /*组选择器*/
+        #m1,#m2{
+            display: none;
+        }
+    /*    伪类选择器*/
+    /*    a:active + img{
+    display: block;
+    }*/
+    /*    兄弟选择器/相邻选择器
+    #b1:hover + m1{
+    display: block;
+    }*/
+    /*    匹配选择器*/
+    #b1:hover ~ #m1{
+        color:red;
+        display: block;
+    }
+    #b2:hover~#m2{
+        color:pink;
+        display:block;
+    }
+    </style>
+</head>
+<body>
+    <a id="b1" href="">dog</a>
+    <a id="b2" href="">狗狗</a>
+
+    <img id="m1" src="./static/imgs/dog.jpg" alt="图片">
+    <img id="m2" src="./static/imgs/271773.jpg" alt="图片">
+</body>
+</html>

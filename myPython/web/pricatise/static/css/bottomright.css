@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+}
+.bck1{
+    width:80%;
+    height:500px;
+    background-color:red;
+    margin:0 auto;
+}
+.bck2{
+    width:80%;
+    height:500px;
+    background-color:deepskyblue;
+    margin:0 auto;
+}
+.bck3{
+    width:80%;
+    height:500px;
+    background-color:lightgray;
+    margin:0 auto;
+}
+.bck4{
+    width:80%;
+    height:500px;
+    background-color:lawngreen;
+    margin:0 auto;
+}
+.bck5{
+    width:80%;
+    height:500px;
+    background-color:hotpink;
+    margin:0 auto;
+}
+.bck6{
+    width:80%;
+    height:500px;
+    background-color:gold;
+    margin:0 auto;
+}
+
+ul {
+    list-style: none;/*去掉列表默认样式*/
+}
+ul li{
+    text-align:center;/*设置文本水平居中显示*/
+    margin:3px;/*设置单元格之间的间距*/
+    line-height:45px;/*设置行高*/
+}
+ul li a{
+    display: block;
+    width:55px;
+    height:45px;
+    text-decoration:none;
+    background-color:greenyellow;
+}
+/*相对窗口定位在右侧底部*/
+.br{
+    position:fixed;
+    right:20px;
+    /*bottom:3%;*/
+    top:80%;
+}
+.wx img{
+    display:none;
+}
+.wx a:hover + img{
+    display: block;
+    position:fixed;
+    right:5%;
+    top:70%;
+}

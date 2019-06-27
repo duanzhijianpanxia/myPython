@@ -1,0 +1,12 @@
+img{
+            display: none;
+        }
+        /*a:active + img{*/
+        /*    display: block;*/
+        /*}*/
+        a:hover + img{
+            display: block;
+        }
+        a{
+            text-decoration: none;
+        }

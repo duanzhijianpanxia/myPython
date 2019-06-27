@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style:none;
+    background-color:tan;
+    overflow:hidden;
+}
+ul li{
+    float:left;
+}
+li a{
+    text-decoration:none;
+    display: block;
+    padding:6px 10px;
+    text-olign:center;
+}
+a:hover{
+    background:gray;
+    color:hotpink;
+}
+.so{
+    position:absolute;
+    right:10px;
+    top:3px;
+}

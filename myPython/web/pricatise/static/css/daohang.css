@@ -1,0 +1,21 @@
+ul{
+    list-style:none;
+    padding:0px;
+    margin:0px;
+    background:greenyellow;
+    width:80px;
+    height:200px;
+}
+
+li a{
+    text-decoration:none;
+    width:80px;
+    display: block;
+}
+ul li{
+    line-height:28px;
+}
+li a:hover{
+    background:gray;
+    color:hotpink;
+}

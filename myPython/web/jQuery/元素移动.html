@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件实例</title>
+    <script src="jquery-1.8.3.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #item1{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <!--当按下adws键时控制页面元素对应的左右上下移动-->
+    <div id="item1"></div>
+    <script>
+        // 定义一次移动的位置
+        var L=0;
+        // 定义一个上下移动的位置
+        var T=0;
+
+        // $('#item1').mouseover(function(){
+            // $('#item1').css('background','purple')
+        // })
+        // $('#item1').mouseout(function(){
+            // $('#item1').css('background','green')
+        // })
+        $(window).keydown(function(e){
+            // console.log('键盘按下时间被触发了');
+            // console.log(e.keyCode);
+            // w 87   a 65  s 83 d 68
+
+            var stp=e.keyCode;
+            // 判断当前按下的是哪个键
+            if(stp==87){
+            // 按下的是w键，让元素上移动
+            // 设置移动步长
+                T-=5;
+                $('#item1').css('top',T+'px');
+            }else if(stp==83){
+            // 按下的是d键，让元素向下移动
+                T+=5;
+                $('#item1').css('top',T+'px');
+            }else if(stp==65){
+                // 按下的是a键，让元素做移动
+                L-=5;
+                $('#item1').css('left',L+'px');
+            }else if(stp==68){
+                // 按下的是d键，让元素向右移动
+                L+=5;
+                $('#item1').css('left',L+'px');
+            }
+        })
+    </script>
+</body>
+</html>

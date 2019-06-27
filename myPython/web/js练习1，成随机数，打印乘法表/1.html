@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript练习</title>
+</head>
+<body>
+    <script>
+        // 生成10以内随机数
+        // js 中只有一个random是用来生成0~1随机小数的
+        // 想要生从10以内随机数，我们可以利用random的结果乘以10，再向下取整得到想要的
+        function rand(){
+            var num = Math.random()*10;
+            var res = Math.floor(num);
+            console.log(res)
+        }
+
+        // rand()
+
+        // 生成指定范围内的随机数
+        function the_rand(m,n) {
+            var s_num = Math.random()*(n-m)+m;
+            var s_res = Math.floor(s_num);
+            console.log(s_res);
+        }
+
+        the_rand(11,20)
+
+        // 用js生成99乘法表
+        function cfb(){
+            var str = '';
+            for (i=1;i<10;i++){
+                for (j=1;j<i+1;j++){
+                    str += j + '*' + i + '=' + i*j + '    '
+                }
+                str += '\n'
+            }
+            console.log(str);
+        }
+        cfb()
+    </script>
+</body>
+</html>
